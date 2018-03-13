@@ -20,6 +20,35 @@ Try a getting started tutorial:
 
 Next, read the [guide](https://guide.meteor.com) and the [documentation](https://docs.meteor.com/).
 
+## aarch64
+Tested with Raspberry Pi 3 Model B and ArchLinuxARM
+
+1. Install necessary packages, python3 won't work
+```bash
+pacman -Sy make gcc python2
+```
+
+2. Link python to python2 executable in `/usr/bin`
+```bash
+ln python2.7 python
+```
+
+3. Extend `/tmp` partition, otherwise mongoDB can't be extracted
+```bash
+mount -o remount,size=4G,noatime /tmp
+```
+
+4. Build the bundle
+```bash
+./scripts/generate-dev-bundle.sh
+```
+
+5. Test meteor
+```bash
+./meteor --version
+```
+
+
 ## Quick Start
 
 On Windows, the installer can be found at https://www.meteor.com/install.
