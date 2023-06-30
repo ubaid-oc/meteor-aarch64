@@ -54,8 +54,8 @@ downloadReleaseCandidateNode() {
 if [ "$ARCH" == "aarch64" ] ; then
   MONGO_VERSION=$MONGO_VERSION_64BIT
   # Download official MongoDB Ubuntu aarch64 binaries
-  MONGO_URL="https://fastdl.mongodb.org/linux/mongodb-linux-aarch64-ubuntu2204-${MONGO_VERSION}.tgz"
-  MONGO_NAME="mongodb-linux-aarch64-ubuntu2204-${MONGO_VERSION}"
+  MONGO_URL="https://fastdl.mongodb.org/linux/mongodb-linux-aarch64-ubuntu1804-${MONGO_VERSION}.tgz"
+  MONGO_NAME="mongodb-linux-aarch64-ubuntu1804-${MONGO_VERSION}"
   echo "Downloading Mongo from ${MONGO_URL}"
   curl -L "${MONGO_URL}" | tar zx
 else
