@@ -60,6 +60,8 @@ if [ "$ARCH" == "aarch64" ] ; then
   MONGO_NAME="mongodb-linux-aarch64-ubuntu1804-${MONGO_VERSION}"
   echo "Downloading Mongo from ${MONGO_URL}"
   curl -L "${MONGO_URL}" | tar zx
+  echo $(pwd)
+  echo $(ls)
 else
   MONGO_VERSION=$MONGO_VERSION_64BIT
   if [ $ARCH = "i686" ]; then
@@ -76,6 +78,7 @@ fi
 mkdir -p "mongodb/bin"
 mv "${MONGO_NAME}/bin/mongod" "mongodb/bin"
 mv "${MONGO_NAME}/bin/mongo" "mongodb/bin"
+echo ${MONGO_NAME}
 rm -rf "${MONGO_NAME}"
 
 # export path so we use the downloaded node and npm
