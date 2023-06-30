@@ -84,6 +84,7 @@ rm -rf "${MONGO_NAME}"
 # export path so we use the downloaded node and npm
 export PATH="$DIR/bin:$PATH"
 
+mkdir "$DIR/lib"
 cd "$DIR/lib"
 # Overwrite the bundled version with the latest version of npm.
 npm install "npm@$NPM_VERSION"
