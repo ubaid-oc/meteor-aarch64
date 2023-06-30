@@ -49,7 +49,7 @@ downloadReleaseCandidateNode() {
     echo "Downloading Node from ${NODE_URL}" >&2
     curl "${NODE_URL}" | tar zx --strip-components 1
 }
-
+extractNodeFromTarGz || downloadNodeFromS3 || downloadOfficialNode
 # Download Mongo from mongodb.com. Will download a 64-bit version of Mongo
 # by default. Will download a 32-bit version of Mongo if using a 32-bit based
 # OS.
