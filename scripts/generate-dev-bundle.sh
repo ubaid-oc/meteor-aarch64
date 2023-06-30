@@ -16,6 +16,8 @@ echo BUILDING DEV BUNDLE "$BUNDLE_VERSION" IN "$DIR"
 
 cd "$DIR"
 
+echo $(pwd)
+
 extractNodeFromTarGz() {
     LOCAL_TGZ="${CHECKOUT_DIR}/node_${PLATFORM}_v${NODE_VERSION}.tar.gz"
     if [ -f "$LOCAL_TGZ" ]
