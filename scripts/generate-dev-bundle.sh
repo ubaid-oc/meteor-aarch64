@@ -94,6 +94,8 @@ which npm
 npm version
 
 # Make node-gyp use Node headers and libraries from $DIR/include/node.
+echo $(ls)
+echo $(ls include)
 export HOME="$DIR"
 export USERPROFILE="$DIR"
 export npm_config_nodedir="$DIR"
