@@ -14,7 +14,7 @@ source "$(dirname $0)/build-dev-bundle-common.sh"
 echo CHECKOUT DIR IS "$CHECKOUT_DIR"
 echo BUILDING DEV BUNDLE "$BUNDLE_VERSION" IN "$DIR"
 
-export $DIR = '/tmp'
+export DIR = '/tmp'
 cd /tmp
 
 extractNodeFromTarGz() {
