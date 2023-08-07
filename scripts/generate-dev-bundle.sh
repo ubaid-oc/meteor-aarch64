@@ -67,7 +67,7 @@ else
   if [ $ARCH = "i686" ]; then
     MONGO_VERSION=$MONGO_VERSION_32BIT
   fi
-  MONGO_NAME="mongodb-${OS}-${ARCH}-${MONGO_VERSION}"
+  MONGO_NAME="mongodb-${OS}-${ARCH}-ubuntu1804-${MONGO_VERSION}"
   MONGO_TGZ="${MONGO_NAME}.tgz"
   MONGO_URL="http://fastdl.mongodb.org/${OS}/${MONGO_TGZ}"
   echo "Downloading Mongo from ${MONGO_URL}"
